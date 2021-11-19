@@ -1,17 +1,6 @@
 import { Grid } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({
-  container: {
-    paddingLeft: "40px",
-    paddingRight: "40px",
-    minHeight: "100vh",
-  },
-});
 
 export function LayoutContainer({ children }) {
-  const classes = useStyles();
-  console.log(children);
   return (
     <Grid
       container
@@ -19,7 +8,7 @@ export function LayoutContainer({ children }) {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "80vh" }}
     >
       <Grid item xs={4}>
         {children}

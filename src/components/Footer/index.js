@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Container } from "@mui/material/";
+import { Toolbar, Typography } from "@mui/material/";
 
 export function Footer() {
   return (

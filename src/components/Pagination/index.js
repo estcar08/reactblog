@@ -9,13 +9,13 @@ Pagination.propTypes = {
 export function Pagination({page,handlePage}) {
   return (
     <Toolbar style={{ justifyContent: "center" }}>
-      <Button sx={{ px: 2 },{fontSize: '20px'}}  variant="standard" color="inherit" onClick={() => handlePage(page - 1)}>
+      <Button sx={{ px: 2, fontSize: '20px'} }  variant="standard" color="inherit" onClick={() => handlePage(page - 1)}>
         Back
       </Button>
       <Typography component='h4' variant='h4'>
           {page}
       </Typography>
-      <Button sx={{ px: 2 },{fontSize: '20px'}}  variant="standard" color="inherit" onClick={() => handlePage(page + 1)}>
+      <Button sx={{ px: 2 , fontSize: '20px'}}  variant="standard" color="inherit" onClick={() => handlePage(page + 1)}>
         Next
       </Button>
     </Toolbar>

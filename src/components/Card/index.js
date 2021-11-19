@@ -6,6 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material//Typography";
 import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -40,13 +41,6 @@ export function OutlinedCard(props) {
   return (
     <Card key={id} className={classes.root} variant="outlined">
       <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          {title}
-        </Typography>
         <Typography variant="h5" component="h2">
           {title}
         </Typography>
@@ -55,7 +49,7 @@ export function OutlinedCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Read</Button>
+        <Button  component={Link} to={`/posts/${id}`}  size="small">Read</Button>
       </CardActions>
     </Card>
   );
