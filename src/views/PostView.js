@@ -5,11 +5,12 @@ import { LayoutContainer } from '../components/LayoutContainer';
 import { NavBar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 import { Button, Typography } from "@mui/material";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import useStyles from "../stylesConfig";
 
 const PostView = () => {
 	const classes = useStyles();
+	const history = useNavigate();
   let { id } = useParams();
 
   const [data, setData] = useState([]);
@@ -26,6 +27,10 @@ const PostView = () => {
 
     asyncCallback();
   }, [setData,id]);
+
+	const prevPage = () => {
+    history(-1);
+  };
 
   return (
     <div className={classes.backcover}>
@@ -51,6 +56,9 @@ const PostView = () => {
 				<Typography align="center" variant="h6" component="h2">
           {data.body}
         </Typography>
+				<Button style={{ marginTop: '2rem', fontSize: '30px' }} color="inherit" onClick={() => prevPage()}>
+          REteurn to previous page
+        </Button>
       </LayoutContainer>
       <Footer />
     </div>

@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-import back from "./assets/img/myblog.jpg";
 
 const theme = createTheme({
   palette: {
