@@ -6,9 +6,10 @@ import { NavBar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 import { Button, Typography } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
-
+import useStyles from "../stylesConfig";
 
 const PostView = () => {
+	const classes = useStyles();
   let { id } = useParams();
 
   const [data, setData] = useState([]);
@@ -27,7 +28,7 @@ const PostView = () => {
   }, [setData,id]);
 
   return (
-    <div>
+    <div className={classes.backcover}>
       <NavBar>
         <Typography
           variant="h4"

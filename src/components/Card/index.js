@@ -39,7 +39,7 @@ export function OutlinedCard(props) {
     body
   } = props;
   return (
-    <Card key={id} className={classes.root} variant="outlined">
+    <Card style={{backgroundColor: 'rgba(255, 255, 255, 0.8)'}} key={id} className={classes.root} variant="outlined">
       <CardContent>
         <Typography variant="h5" component="h2">
           {title}

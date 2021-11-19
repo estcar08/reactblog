@@ -9,6 +9,7 @@ import { Pagination } from "../components/Pagination";
 import { OutlinedCard } from "../components/Card";
 import { Button, Typography } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useStyles from "../stylesConfig";
 
 const PostsView = () => {
   const location = useLocation();
@@ -42,8 +43,9 @@ const PostsView = () => {
     asyncCallback();
   }, [setData,page]);
 
+  const classes = useStyles();
   return (
-    <div>
+    <div className={classes.backcover}>
       <NavBar>
         <Typography
           variant="h4"

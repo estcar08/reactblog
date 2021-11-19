@@ -1,24 +1,12 @@
 import { Link } from "react-router-dom";
 import { LayoutContainer } from "../components/LayoutContainer";
-import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
-import back from "../assets/img/myblog.jpg";
-
-const useStyles = makeStyles({
-  paperContainer: {
-    backgroundImage: `url(${back})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed",
-    backgroundPosition: "center center",
-    minHeight: "100vh"
-  },
-});
+import useStyles from "../stylesConfig";
 
 const NotFoundView = () => {
   const classes = useStyles();
   return (
-    <div className={classes.paperContainer}>
+    <div style={{minHeight: "100vh"}} className={classes.backcover}>
       <LayoutContainer>
         <div>
           <Typography

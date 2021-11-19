@@ -4,23 +4,12 @@ import { NavBar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 import { Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@mui/styles";
-import back from "../assets/img/myblog.jpg";
-
-const useStyles = makeStyles({
-  paperContainer: {
-    backgroundImage: `url(${back})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed",
-    backgroundPosition: "center center",
-  },
-});
+import useStyles from "../stylesConfig";
 
 const LandingView = () => {
   const classes = useStyles();
   return (
-    <div className={classes.paperContainer}>
+    <div className={classes.backcover}>
       <NavBar>
         <Typography
           variant="h4"
